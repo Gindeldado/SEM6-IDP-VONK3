@@ -5,7 +5,7 @@ Iedere component zijn functie en relatie wordt her uitgelegd.
 Locatie `PeriodeKiezerComponent` in `src/componets/PeriodeKiezer.tsx`  
 Hiermee kan de gebruiker de tijdsperiode aanpassen.
 - PolygonMap
-Locatie `LeafletPolygonsMap` in `src/componets/PolygonMap.tsx`  
+Locatie `LeafletPolygonsMap` in `src/componets/PolygonsMap.tsx`  
 Dit is de map waarin de gebruiker buurten en waarnemingen kan selecteren. Ook zit de keuzelijst van buurten hierin.
 - WaarnemingenList
 Locatie `WaarnemingenList` in `src/componets/WaarnemingenList.tsx`  
@@ -17,7 +17,7 @@ De geselecteerde waarnemingen informatie wordt met DisplayWaarnemingenInfo getoo
 ## De "parent" component
 
 De parent component is de component die alles samen brengt zodat de data op het juiste moment op de juiste plek is.  
-Op dit moment is de parent component `WaarnemingenModulesPage` in `src/componets/WaarnemingenModulePage.tsx`.  
+Op dit moment is de parent component `WaarnemingenPortaal` in `src/pages/WaarnemingenPortaal.tsx`.  
   
 De parent is eigenaar van data die gedeeld word met de hoofd(child) components.  
 ```
@@ -44,7 +44,3 @@ useEffect(() => {
 }, [buurtName, periode.startDate, periode.endDate]);
 
 ```
-
-## Alle components
- 
-[WIP]
