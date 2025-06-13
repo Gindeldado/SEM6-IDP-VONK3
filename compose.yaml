@@ -1,0 +1,20 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "8082:3000" # 3000 werkt for some reason niet maar 8082 wel wordt denk gebloked door school ofzo
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5173"
+#    depends_on:
+#      - backend
+    volumes:
+      - ./frontend:/frontend_app    # Syncs frontend code
+      - /frontend_app/node_modules  # prefent overriding van de container verzie door host(is in begin leeg)
+  
